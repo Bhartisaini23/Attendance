@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap" rel="stylesheet">
+
+    <title>Attendance System</title>
+  </head>
+  <body background="https://wallpaper.dog/large/20525663.jpg">
+    <div class="container-fluid">
+      <div class="row justify-content-center" style="margin-top: 3%;">
+        <div>
+          <h2 style="font-family: 'Mouse Memoirs', sans-serif; color: #d0e0eb; margin-top: 10px; font-size: 5vw; text-align: center;">**********REGISTRATION PROCESS**********</h2>
+
+        </div>
+        <div class="col-5 ">
+          <form method="post"  action="{% url 'saving' %}">
+              {% csrf_token %}
+      
+
+              <label for="fname" style="font-family: 'Mouse Memoirs', sans-serif; font-size: 25px;color: #d0e0eb;">NAME</label>
+              <input type="text" class="form-control" placeholder="Enter Name..." style="font-size: 20px; color: black; font-weight: 600; background-color: #d0e0eb; border-width: 7px; border-color: #306a76;" id="fname" name="name" required><br>
+      
+              <label for="lname" style="font-family: 'Mouse Memoirs', sans-serif; font-size: 25px;color: #d0e0eb;">ID</label>
+              <input type="text" class="form-control" placeholder="Enter ID..." style=" font-size: 20px;background-color: #d0e0eb;font-weight: 600;color: black;  border-width: 7px; border-color: #306a76;" id="lname" name="id" required><br>
+      
+              <label for="num" style="font-family: 'Mouse Memoirs', sans-serif; font-size: 25px;color: #d0e0eb;">NUMBER</label>
+              <input type="text" class="form-control" placeholder="Enter Phone Number..." style=" font-size: 20px;background-color: #d0e0eb;font-weight: 600; color: black;border-width: 7px; border-color: #306a76;" id="num" name="number" required><br>
+      
+
+              <button type="submit"  style="color: #c1e4f0; border-color: black; background-color: #306a76; font-size: 25px; border-radius: 2.25rem; border-width: 6px;font-family: 'Mouse Memoirs', sans-serif;
+              ">Take A Picture And Submit</button>
+            </form><br><br>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
+</html>
